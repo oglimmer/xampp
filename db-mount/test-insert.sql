@@ -1,0 +1,10 @@
+INSERT INTO barcodes (barcode) VALUES ("11");
+INSERT INTO barcodes (barcode) VALUES ("12");
+INSERT INTO barcodes (barcode) VALUES ("13");
+INSERT INTO barcodes (barcode) VALUES ("14");
+INSERT INTO barcodes (barcode) VALUES ("15");
+INSERT INTO barcodes (barcode) VALUES ("16");
+INSERT INTO barcodes (barcode) VALUES ("17");
+INSERT INTO barcodes (barcode) VALUES ("18");
+INSERT INTO barcodes (barcode) VALUES ("19");
+INSERT INTO barcodes (barcode) VALUES ("20");

@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  apache:
+    build: apache
+    ports: 
+        - "8080:80"
+    volumes:
+        - ./www-root:/var/www/html/
+  mariadb:
+    image: mariadb
+    ports: 
+        - "3306:3306"
+    environment:
+        MARIADB_DATABASE: testdb
+        MARIADB_USER: user
+        MARIADB_PASSWORD: pass
+        MARIADB_ROOT_PASSWORD: rootpass
+    volumes:
+        - ./db-mount:/mnt/sql
+        - ./db-data:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - 8088:80
+    environment:
+        MYSQL_USER: user
+        MYSQL_PASSWORD: pass
+        MYSQL_ROOT_PASSWORD: rootpass
+        PMA_HOST: mariadb
